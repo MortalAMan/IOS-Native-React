@@ -9,14 +9,31 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  TextInput,
 } from 'react-native';
 
 export default class myFirstProject extends Component {
   state = { todo: '', todos: [] };
 
   displayTodos = () => {
-    // mapping our todos in state and returning React Native Components 
+    // mapping our todos in state and returning React Native Components
+    // Pseudocode for the map
+    // I create a new array
+    // I would loop the todos
+    // I would push on to the new array each time i looped
+    // I would return the new array
+
+    // Map without map
+    // let todos = [];
+    // this.state.todos.forEach( todo => {
+    //  todos.push(<Text>{todo}</Text>);
+    // });
+    // return todos;
+
+    return this.state.todos.map(todo => {
+      return (<Text>{todo}</Text>);
+    });
   }
 
   addTodo = () => {
